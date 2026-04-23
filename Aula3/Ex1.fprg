@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ex1"/>
+        <attribute name="authors" value="motaArthur"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-11 08:30:19 "/>
+        <attribute name="created" value="bW90YUFydGh1cjs5MDk1OTQtVTsyMDI2LTAzLTExOyIwNzozNDo0MCAiOzI3MDU="/>
+        <attribute name="edited" value="bW90YUFydGh1cjs5MDk1OTQtVTsyMDI2LTAzLTExOyIwODozMDoxOSAiOzI7MjgxNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="peso, altura, imc" type="Real" array="False" size=""/>
+            <output expression="&quot;Qual o seu peso: &quot;" newline="True"/>
+            <input variable="peso"/>
+            <output expression="&quot;Qual o sua altura: &quot;" newline="True"/>
+            <input variable="altura"/>
+            <assign variable="imc" expression="calculo (peso, altura)"/>
+            <output expression="&quot;seu imc: &quot;&amp;imc" newline="True"/>
+            <call expression="tabela (imc)"/>
+        </body>
+    </function>
+    <function name="AreaRet" type="Real" variable="Area">
+        <parameters>
+            <parameter name="base" type="Real" array="False"/>
+            <parameter name="Altura" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Area" type="Real" array="False" size=""/>
+            <assign variable="Area" expression="base *altura"/>
+        </body>
+    </function>
+    <function name="calculo" type="Real" variable="resultado">
+        <parameters>
+            <parameter name="peso" type="Real" array="False"/>
+            <parameter name="altura" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="resultado" type="Real" array="False" size=""/>
+            <assign variable="resultado" expression="peso / (altura^2)"/>
+        </body>
+    </function>
+    <function name="tabela" type="None" variable="retorno">
+        <parameters>
+            <parameter name="imc" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <if expression="imc &gt;=40">
+                <then>
+                    <output expression="&quot;Obesidade grau III&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="imc &gt;= 35">
+                        <then>
+                            <output expression="&quot;Obesidade grau II&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="imc &gt;= 30">
+                                <then>
+                                    <output expression="&quot;Obesidade grau I&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="imc &gt;= 25">
+                                        <then>
+                                            <output expression="&quot;Sobrepeso&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="imc &gt;= 18.5">
+                                                <then>
+                                                    <output expression="&quot;Normal&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="imc &lt;= 18.5">
+                                                        <then>
+                                                            <output expression="&quot;Magreza&quot;" newline="True"/>
+                                                        </then>
+                                                        <else/>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

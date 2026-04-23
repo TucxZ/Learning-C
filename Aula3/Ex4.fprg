@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ex1"/>
+        <attribute name="authors" value="motaArthur"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-11 09:21:12 "/>
+        <attribute name="created" value="bW90YUFydGh1cjs5MDk1OTQtVTsyMDI2LTAzLTExOyIwNzozNDo0MCAiOzI3MDU="/>
+        <attribute name="edited" value="bW90YUFydGh1cjs5MDk1OTQtVTsyMDI2LTAzLTExOyIwOToyMToxMiAiOzU7MjgxNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="c, t" type="Real" array="False" size=""/>
+            <output expression="&quot;Qual o tamanho do circulo&quot;" newline="True"/>
+            <input variable="t"/>
+            <for variable="c" start="1" end="360" direction="inc" step="1">
+                <turn expression="1" rotate="right"/>
+                <forward expression="t" pen="down"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

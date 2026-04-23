@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ex1"/>
+        <attribute name="authors" value="motaArthur"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-11 08:42:08 "/>
+        <attribute name="created" value="bW90YUFydGh1cjs5MDk1OTQtVTsyMDI2LTAzLTExOyIwNzozNDo0MCAiOzI3MDU="/>
+        <attribute name="edited" value="bW90YUFydGh1cjs5MDk1OTQtVTsyMDI2LTAzLTExOyIwODo0MjowOCAiOzM7MjgxOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="altura, base, resultado" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite a altura de um ret&#226;ngulo em escala decimal: &quot;" newline="True"/>
+            <input variable="altura"/>
+            <output expression="&quot;Digite a base de um ret&#226;ngulo em escala decimal: &quot;" newline="True"/>
+            <input variable="base"/>
+            <for variable="resultado" start="1" end="2" direction="inc" step="1">
+                <call expression="desenho (altura, base)"/>
+            </for>
+        </body>
+    </function>
+    <function name="desenho" type="None" variable="">
+        <parameters>
+            <parameter name="altura" type="Real" array="False"/>
+            <parameter name="base" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <forward expression="altura" pen="down"/>
+            <turn expression="90" rotate="right"/>
+            <forward expression="base" pen="down"/>
+            <turn expression="90" rotate="right"/>
+        </body>
+    </function>
+</flowgorithm>

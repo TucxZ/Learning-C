@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ex1"/>
+        <attribute name="authors" value="motaArthur"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-11 09:01:24 "/>
+        <attribute name="created" value="bW90YUFydGh1cjs5MDk1OTQtVTsyMDI2LTAzLTExOyIwNzozNDo0MCAiOzI3MDU="/>
+        <attribute name="edited" value="bW90YUFydGh1cjs5MDk1OTQtVTsyMDI2LTAzLTExOyIwOTowMToyNCAiOzQ7MjgxNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="altura, base, h" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite a altura do triangulo&quot;" newline="True"/>
+            <input variable="altura"/>
+            <output expression="&quot;Digite a base do triangulo&quot;" newline="True"/>
+            <input variable="base"/>
+            <assign variable="h" expression="alturaH (altura, base)"/>
+            <output expression="h" newline="True"/>
+            <call expression="desenho (base, h)"/>
+        </body>
+    </function>
+    <function name="alturaH" type="Real" variable="lado">
+        <parameters>
+            <parameter name="altura" type="Real" array="False"/>
+            <parameter name="base" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="lado" type="Real" array="False" size=""/>
+            <assign variable="lado" expression="sqrt(base^2 + altura^2)"/>
+        </body>
+    </function>
+    <function name="desenho" type="None" variable="">
+        <parameters>
+            <parameter name="base" type="Real" array="False"/>
+            <parameter name="h" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <turn expression="45" rotate="right"/>
+            <forward expression="h" pen="down"/>
+            <turn expression="90" rotate="right"/>
+            <forward expression="h" pen="down"/>
+            <turn expression="135" rotate="right"/>
+            <forward expression="base * 2" pen="down"/>
+        </body>
+    </function>
+</flowgorithm>
